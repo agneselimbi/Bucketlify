@@ -1,0 +1,47 @@
+body{
+    margin: 0 80px;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Poppins, Public Sans, "Open Sans", "Great Vibes"
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Poppins;
+    /* background-color:#eecaa2 ; */
+    /* color: #fff7ed; */
+}
+
+
+ nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap:12px;
+ }
+ a{
+    color: #78716c;
+    font-size: 16px;
+    text-decoration: none;
+ }
+ a:hover{
+    color: #57534e;
+    font-size: 18px;
+ }
+
+ .hero{
+    background-color:#eecaa2 ;
+    border-radius: 12px;
+    color: #fff7ed;
+    font-family: "Great Vibes";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80vh;
+    font-size: 64px;
+    padding:0 12px;
+ }
