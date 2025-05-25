@@ -1,0 +1,23 @@
+{
+  "name": "bucketlify",
+  "version": "1.0.0",
+  "description": "bucket list tracker",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agneselimbi/Bucketlify.git"
+  },
+  "author": "Agnes Elimbi Moudio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agneselimbi/Bucketlify/issues"
+  },
+  "homepage": "https://github.com/agneselimbi/Bucketlify#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

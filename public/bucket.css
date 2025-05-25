@@ -1,0 +1,112 @@
+body {
+  margin: 0 80px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Public Sans, "Open Sans", "Great Vibes";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+  /* background-color:#eecaa2 ; */
+  /* color: #fff7ed; */
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 12px;
+}
+a {
+  color: #78716c;
+  font-size: 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: #57534e;
+  font-size: 18px;
+}
+
+/*Title*/
+h1 {
+  text-align: center;
+  letter-spacing: 1.8;
+  font-size: 64px;
+  color: #735400;
+  font-family: "Great Vibes";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center both bucket list and progress bar */
+  gap: 1rem; /* space between list and progress */
+  margin: 2.5rem auto;
+  width: 600px;
+  padding: 1rem;
+  border: 2px solid grey;
+  box-shadow: 2px 6px #78716c;
+  border-radius: 2px;
+}
+.bucket-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 18px;
+}
+
+.bucket-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 18px;
+  height: auto;
+  width: 100%;
+  color: #373737;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  font-size: 14px;
+}
+.bucket {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  /* min-width: 500px; */
+  background-color: #eccfae;
+  border-radius: 12px;
+  padding-left: 12px;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-wrap: pretty;
+}
+.status {
+  text-align: start;
+}
+.progress {
+  color: #737373;
+  background-color: #eccfae;
+  text-align: center;
+  border-radius: 4px;
+  width: 100%;
+  min-width: 600px;
+}
+
+@media (max-width<768) {
+  .progress {
+    max-width: 400px;
+  }
+}

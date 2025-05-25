@@ -1,0 +1,160 @@
+body {
+  margin: 0 80px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Public Sans, "Open Sans", "Great Vibes";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+  /* background-color:#eecaa2 ; */
+  /* color: #fff7ed; */
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 12px;
+}
+a {
+  color: #78716c;
+  font-size: 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: #57534e;
+  font-size: 18px;
+}
+
+/*Title*/
+h1 {
+  text-align: center;
+  font-size: 64px;
+  color: #735400;
+  font-family: Poppins;
+}
+
+.bucket-list {
+  list-style: none;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.status {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+  display: inline-block;
+}
+.status input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Fake checkbox */
+.status .checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #c5c5c5;
+  border: 2px solid #c5c5c5;
+  text-align: center;
+}
+
+/* Show checked state */
+.status input[type="radio"]:checked ~ .checkmark {
+  background-color: #9eacb8;
+  border-color: #9eacb8;
+}
+
+/* Add the checkmark "tick" */
+.status input[type="radio"]:checked ~ .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.bucket-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  height: 80px;
+  width: 600px;
+  background-color: #eccfae;
+  color: #615f5f;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding-right: 24px;
+  padding-left: 18px;
+}
+.bucket-item .title {
+  font-family: "Great Vibes";
+  font-size: 2rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn-item {
+  display: inline-block;
+  width: 16rem;
+  height: 3rem;
+  border-style: none;
+  border-radius: 18px;
+  padding: 8px 8px;
+  margin-right: 48px;
+  background-color: #eccfae;
+  margin-bottom: 8px;
+  color: #737373;
+  text-align: center;
+  font-weight: 600;
+  font-size: large;
+}
+
+btn-item:hover {
+  color: #735400;
+  transform: scale(1.1);
+}
+.progressbar {
+  color: #737373;
+}
+.progressbar .title {
+  align-self: center;
+}
+.progressbar .bar {
+  display: inline-block;
+  border: 1px #e4d3a6 solid;
+  background-color: #e4d3a6;
+  height: 40px;
+  width: 120px;
+  margin: 0 12px 0 12px;
+}
+
+.progressbar .complete {
+  display: inline-block;
+}
