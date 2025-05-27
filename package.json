@@ -18,6 +18,15 @@
   },
   "homepage": "https://github.com/agneselimbi/Bucketlify#readme",
   "dependencies": {
-    "cors": "^2.8.5"
-  }
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "expres": "^0.0.5",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
+  },
+  "keywords": []
 }

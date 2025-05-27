@@ -39,55 +39,20 @@
       <h1>My Bucket List</h1>
       <div class="container">
         <ul class="bucket-list">
-          <li class="bucket-item">
-            <div class="category">
-              <i class="fa-solid fa-location-dot"></i>
-              Travel
-            </div>
+        <% goals.forEach(goal => { %>
+            <li class="bucket-item">
+               <div class="category">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <%= goal.category %>
+                </div>
             <div class="bucket">
-              <div class="title">Go to Japan</div>
+              <div class="title"><%= goal.title %></div>
               <div class="status">
-                Completed: <span class="completed-status">Yes</span>
+                Completed: <span class="completed-status"><%= goal.completed %></span>
               </div>
             </div>
-          </li>
-          <li class="bucket-item">
-            <div class="category">
-              <i class="fa-solid fa-book"></i>
-              Skills
-            </div>
-            <div class="bucket">
-              <div class="title">Read 100 books in a year</div>
-              <div class="status">
-                Completed: <span class="completed-status">No</span>
-              </div>
-            </div>
-          </li>
-          <li class="bucket-item">
-            <div class="category">
-              <i class="fa-solid fa-shuffle"></i>
-              Random
-            </div>
-            <div class="bucket">
-              <div class="title">Go skydiving</div>
-              <div class="status">
-                Completed: <span class="completed-status">Yes</span>
-              </div>
-            </div>
-          </li>
-          <li class="bucket-item">
-            <div class="category">
-              <i class="fa-solid fa-medal"></i>
-              Fitness
-            </div>
-            <div class="bucket">
-              <div class="title">Complete the Boston Marathon</div>
-              <div class="status">
-                Completed: <span class="completed-status">Yes</span>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>  
+          <% }) %>
         <div class="progress">xx Complete</div>
       </div>
     </main>

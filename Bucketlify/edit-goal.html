@@ -30,21 +30,24 @@
     </header>
     <main>
       <h1>Edit Goal</h1>
-      <form action="" method="post" class="goal-form" target="_self">
+      <form action="/edit" method="post" class="goal-form" target="_self">
         <div class="goal">
-          <label for="title">Title</label>
+          <label for="title"><%= goal.title %></label>
           <input type="text" name="title" id="title" class="title" required />
         </div>
         <div class="goal">
           <label for="category">Category</label>
           <select id="category" name="category" required>
-            <option value="travel">Travel</option>
-            <option value="skills">Skills</option>
-            <option value="fitness">Fitness</option>
+            <option value="travel" <%= goal.category === "travel" ? selected : "" %>>Travel</option>
+            <option value="skills" <%= goal.category === "skills" ? selected : "" %>>Skills</option>
+            <option value="fitness" <%= goal.category === "fitness" ? selected : "" %> >Fitness</option>
             <option value="random">Random</option>
           </select>
         </div>
+        <input type="checkbox" name="completed-status" id="completed-status" <%=
+        goal.completed ? checked : "" %> />
         <button type="submit">Update Goal</button>
+        <button type="submit">Cancel</button>
       </form>
     </main>
   </body>
