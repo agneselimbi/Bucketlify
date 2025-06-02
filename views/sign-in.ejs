@@ -40,6 +40,11 @@
         <h2 class="card-title">Get started</h2>
         <p>Sign into your account</p>
       </div>
+      <!-- <% if (success_msg.length > 0) { %>
+      <div class="alert success"><%= success_msg[0] %></div>
+      <% } %> <% if (error_msg.length > 0) { %>
+      <div class="alert error"><%= error_msg[0] %></div>
+      <% } %> -->
       <form action="/login" method="post" class="signin-form" target="_self">
         <div class="signin">
           <label for="email">Enter your email</label>

@@ -40,7 +40,14 @@
         <h2 class="card-title">Get started</h2>
         <p>Let us create your account</p>
       </div>
-      <form action="" method="post" class="signin-form" target="_self">
+      <form
+        action="/signup"
+        method="post"
+        class="signin-form"
+        target="_self"
+        onclick="this.querySelector(input[type='submit']).alert(`An email has been sent to ${email}. Please confirm email before sign-in`
+  );"
+      >
         <div class="signin">
           <label for="email">Enter your email</label>
           <input
@@ -62,7 +69,7 @@
           />
         </div>
         <div class="sign-in">
-          <input type="button" value="Get Started" />
+          <input type="submit" value="Get Started" />
         </div>
       </form>
       <footer>

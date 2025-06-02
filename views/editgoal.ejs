@@ -33,27 +33,27 @@
     <form action="/bucket-item" method="post" class="goal-form" target="_self">
       <div class="goal" style="display: none;">
         <label for="id">ID</label>
-        <input type="text" name="id" id="id" class="id" value="<%= id %>" required />
+        <input type="text" name="id" id="id" class="id" value="<%= goal.id %>" required />
       </div>
 
       <div class="goal">
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" class="title" value="<%= title %>" required />
+        <input type="text" name="title" id="title" class="title" value="<%= goal.title %>" required />
       </div>
 
       <div class="goal">
         <label for="category">Category</label>
-        <select id="category" name="category" required>
-          <option value="travel" <%= category === "travel" ? "selected" : "" %>>Travel</option>
-          <option value="skills" <%= category === "skills" ? "selected" : "" %>>Skills</option>
-          <option value="fitness" <%= category === "fitness" ? "selected" : "" %>>Fitness</option>
-          <option value="random" <%= category === "random" ? "selected" : "" %>>Random</option>
+        
+          <select id="category" name="category" required>
+            <% category.forEach(cat => { %>
+          <option value="<%=cat.categoy %>"  <%= cat.categoy === goal.category ? "selected" : "" %>><%= cat.categoy %> </option>
+            <% }); %>
         </select>
       </div>
 
       <div class="goal status">
-        <label for="completed-status">Completed <%= completed %>  </label>
-        <input type="checkbox" name="completed" id="completed-status" value=<%= completed ==="true" ? true : false %>  <%= completed==="true" ? "checked" : "" %>  />
+        <label for="completed-status">Completed <%= goal.completed %> </label>
+        <input type="checkbox" name="completed" id="completed-status" value = <%= goal.completed === 'true'  ? true : false %>  <%= goal.completed  === 'true' ? "checked" : "" %>  />
       </div>
 
       <button type="submit">Update Goal</button>

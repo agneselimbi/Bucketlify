@@ -10,7 +10,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #eecaa2;
-  padding: 0 2rem;
+  padding: 0.5 2rem;
   /* color: #fff7ed; */
 }
 nav ul {
@@ -34,12 +34,14 @@ nav a:hover {
 .logo-item {
   font-size: 4rem;
   text-align: center;
+
   font-weight: 800;
 }
 
 h1 {
   text-align: center;
   font-size: 4rem;
+  font-family: "Great Vibes";
 }
 
 /* Main Table */

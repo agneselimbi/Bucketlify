@@ -39,10 +39,17 @@
       <h1>My Bucket List</h1>
       <div class="container">
         <ul class="bucket-list">
-        <% goals.forEach(goal => { %>
+          <% goals.forEach(goal => { %>
             <li class="bucket-item">
                <div class="category">
-                  <i class="fa-solid fa-location-dot"></i>
+                <% let logoClass= "";
+                 for (let i = 0 ; i< category.length;i++){
+                  if(category[i].categoy === goal.category){
+                    logoClass = category[i].categoryLogo; 
+                    break;
+                } 
+          }%>
+                <i class="<%= logoClass %>"></i>
                   <%= goal.category %>
                 </div>
             <div class="bucket">
@@ -53,6 +60,7 @@
             </div>
             </li>  
           <% }) %>
+        
         <div class="progress">xx Complete</div>
       </div>
     </main>
@@ -62,5 +70,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="/bucket.js"></script>
   </body>
 </html>
